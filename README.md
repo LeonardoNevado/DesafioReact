@@ -51,3 +51,9 @@ Tem um tempinho a mais? Acha que pode fazer mais? Então aqui vai alguns desafio
 - Já pensou em utilizar `styled-components`?
 - Imagina que todo mundo comece a acessar sua aplicação, seria muito legal se ela fosse internacionalizada.
 - Mudar o theme de light para dark mode seria bacana!
+
+
+
+
+
+Based on [Encontact Desafio de 2021](https://github.com/EnkiGroup/DesafioReactEncontact2021).
