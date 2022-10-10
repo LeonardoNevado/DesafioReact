@@ -9,11 +9,11 @@
 }
 
 .header h1 {
-  font-weight: 600;
-  color: #84878a;
-  font-size: 30px;
   display: flex;
   justify-content: center;
+  font-weight: 600;
+  color: #28283571;;
+  font-size: 30px;
   margin: 30px 0;
 }
 
@@ -28,12 +28,12 @@ input {
 .input::-webkit-input-placeholder {
   font-size: 14px;
   font-weight: 500;
-  color: #b6b6b7;
+  color: #28283556;
 }
 
 .input {
   width: 307.39px;
-  height: 4.5VH;
+  height: 4.5vh;
 }
 
 .btn {
@@ -58,7 +58,7 @@ input {
   background-color: #fff;
   height: 5.5vh;
   padding-left: 15px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
   border-left: 11px solid #64bdf8;
   border-radius: 10px;
   margin-top: 20px;

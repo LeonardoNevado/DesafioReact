@@ -12,7 +12,7 @@ export default function App() {
       setTask(event.target.value);
     }
   };
-  
+
   const addTask = (): void => {
     const newTask = { taskName: task };
     setTodoList([...todoList, newTask]);
@@ -30,23 +30,25 @@ export default function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>Todos</h1>
+        <h1>Tarefas</h1>
 
         <input
           type="text"
           autoComplete="off"
-          placeholder="What needs to be done?"
+          placeholder="Nova Tarefa . . ."
           name="task"
           className="input"
           value={task}
           onChange={handleChange}
         />
 
-        <button className="btn" onClick={addTask}>+</button>
+        <button className="btn" onClick={addTask}>
+          +
+        </button>
       </div>
       <div className="todoList">
         {todoList.map((task: ITask, key: number) => {
-          return <TodoTask key={key} task={task} deleteTask={deleteTask}/>;
+          return <TodoTask key={key} task={task} deleteTask={deleteTask} />;
         })}
       </div>
     </div>
