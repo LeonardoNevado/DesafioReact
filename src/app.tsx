@@ -1,26 +1,24 @@
-import TodoTask from "./components/TodoTask/TodoTask";
-import React, { useState } from "react";
-
-import "./styles/styles.css";
-
-interface ITask {
-  id: number;
-  nameTask: string;
-}
+import TodoTask from "./Components/TodoTask/TodoTask";
+import React, { useState, ChangeEvent } from "react";
+import { ITask } from "./Components/TodoTask/interfaces";
+import "./Styles/styles.css";
 
 export default function App() {
-  const [task, setTask] = useState("");
+  
+  const [task, setTask] = useState<string>("")
+  const [todoList, setTodoList] = useState<ITask[]>([])
+  
+  
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+  if(event.target.name === "task")  {
+    setTask(event.target.value)
+    console.log(todoList)
+  }
+};
 
-  const [todoList, setTodoList] = useState<ITask[]>([]);
-
-  function addTask() {
-    const idRandom = (num: number) => Math.floor(Math.random() * num);
-
-    console.log(idRandom(10));
-
-    const newTask = { id: idRandom(999), nameTask: task };
-
-    setTodoList([...todoList, newTask]);
+  const addTask = (): void => {
+    const newTask = { taskName: task }
+    setTodoList([...todoList, newTask])
   }
 
   return (
@@ -34,24 +32,17 @@ export default function App() {
           placeholder="What needs to be done?"
           name="task"
           className="input"
-          value={task}
-          onChange={(event) => setTask(event.target.value)}
+          onChange={handleChange}
         />
 
+        <button onClick={addTask}>
+          +
+        </button>
       </header>
+      <div className="todoList">
 
-      <div className="line"></div>
+      </div>
 
-      <TodoTask />
-
-      {todoList.map((task) => (
-        <div>
-          {task.nameTask}
-          {task.id}
-        </div>
-      ))}
-
-      <ul className="list"></ul>
     </div>
   );
 }

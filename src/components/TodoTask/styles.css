@@ -1,4 +1,4 @@
-.card {
+.task {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,22 +21,22 @@
     margin: 25px 0 0 0;
 }
 
-.card .btn-card {
+.task .btn-card {
     background-color: #fff;
 }
 
-.card .line2 {
+.task .line2 {
     display: flex;
     flex-direction: column;
 }
 
-.card p {
+.task p {
     font-size: 16px;
     color: #9F9FA8;
     font-weight: 600;
 }
 
-.card span {
+.task span {
     cursor: pointer;
     text-align: center;
     color: #B6B6B7;

@@ -1,11 +1,17 @@
 import './styles.css'
+import { ITask } from "./interfaces";
+
+interface Props {
+    task: ITask;
+    completeTask(taskNameToDelete: string): void;
+  }
 
 function TodoTask() {
 	
 	return (
-		<div className="card">
+		<div className="task">
 			<div>
-                <p>Fazer lição</p>
+                <p>Estudar</p>
             </div>
 
             <div className="line2" >
