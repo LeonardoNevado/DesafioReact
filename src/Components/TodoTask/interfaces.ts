@@ -1,3 +1,3 @@
 export interface ITask {
-    taskName: string;
-  }
+  taskName: string;
+}

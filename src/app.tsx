@@ -1,7 +1,7 @@
-import TodoTask from "./Components/TodoTask/TodoTask";
-import React, { useState, ChangeEvent } from "react";
-import { ITask } from "./Components/TodoTask/interfaces";
 import "./Styles/styles.css";
+import React, { useState, ChangeEvent } from "react";
+import TodoTask from "./Components/TodoTask/TodoTask";
+import { ITask } from "./Components/TodoTask/interfaces";
 
 export default function App() {
   const [task, setTask] = useState<string>("");
