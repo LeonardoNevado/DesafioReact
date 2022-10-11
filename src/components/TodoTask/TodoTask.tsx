@@ -12,7 +12,8 @@ const TodoTask = ({ task, deleteTask }: Props) => {
       <div className="content">
         <span>{task.taskName}</span>
       </div>
-      <button className="x"
+      <button
+        className="x"
         onClick={() => {
           deleteTask(task.taskName);
         }}
