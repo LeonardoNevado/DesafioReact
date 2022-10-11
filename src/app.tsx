@@ -1,4 +1,4 @@
-import "./Styles/styles.css";
+import "./styles/styles.css";
 import React, { useState, ChangeEvent } from "react";
 import TodoTask from "./Components/TodoTask/TodoTask";
 import { ITask } from "./Components/TodoTask/interfaces";
