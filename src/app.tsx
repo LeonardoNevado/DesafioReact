@@ -4,6 +4,24 @@ import TodoTask from "./Components/TodoTask/TodoTask";
 import { ITask } from "./Components/TodoTask/interfaces";
 
 export default function App() {
+  const List = [
+    {
+      id: "flrGI",
+      title: "Lavar os pratos",
+      isDone: false,
+    },
+    {
+      id: "Tw-I9",
+      title: "Cortar a grama",
+      isDone: true,
+    },
+    {
+      id: "7f2sf",
+      title: "Comprar pão",
+      isDone: false,
+    },
+  ];
+
   const [task, setTask] = useState<string>("");
   const [todoList, setTodoList] = useState<ITask[]>([]);
 
@@ -54,4 +72,3 @@ export default function App() {
     </div>
   );
 }
-
