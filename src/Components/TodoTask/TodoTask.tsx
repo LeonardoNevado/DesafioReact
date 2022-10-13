@@ -10,7 +10,10 @@ const TodoTask = ({ task, deleteTask }: Props) => {
   return (
     <div className="task">
       <div className="content">
-        <span>{task.taskName}</span>
+        <label>
+          <input className="checkbox" type="checkbox" />
+        </label>
+        <span className="taskText">{task.taskName}</span>
       </div>
       <button
         className="x"

@@ -5,8 +5,8 @@ import { ITask } from "./Components/TodoTask/interfaces";
 
 export default function App() {
   const [task, setTask] = useState<string>("");
+  const [taskCount, setTaskCount] = useState(0);
   const [todoList, setTodoList] = useState<ITask[]>([]);
-  const [taskCount, setTaskCount] = useState(0)
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     if (event.target.name === "taskAdd") {
@@ -18,7 +18,6 @@ export default function App() {
     const newTask = { taskName: task };
     setTodoList([...todoList, newTask]);
     setTask("");
-    
   };
 
   const deleteTask = (taskNameToDelete: string): void => {
@@ -36,38 +35,36 @@ export default function App() {
 
         <input
           type="text"
-          autoComplete="off" 
+          autoComplete="off"
           placeholder="Nova Tarefa . . ."
           name="taskAdd"
           className="input"
           value={task}
           onChange={handleChange}
-
         />
 
         <button className="btn" onClick={addTask}>
           +
         </button>
       </div>
-      <span className="todo-cont">Tarefas: {taskCount}</span>
       <footer>
-      <ul>
-        <li>
-      <a href="#/Todas">Todas</a>
-        </li>
-        <li>
-      <a href="#/Ativas">Ativas</a>
-        </li>
-        <li> 
-      <a href="#/Concluídas">Concluídas</a>
-        </li>
-
-      </ul>
+        <ul className="filters">
+          <li>
+            <a href="#/Todas">Todas</a>
+          </li>
+          <li>
+            <a href="#/Ativas">Ativas</a>
+          </li>
+          <li>
+            <a href="#/Concluídas">Concluídas</a>
+          </li>
+        </ul>
       </footer>
       <hr />
+      <span className="todo-cont">Tarefas: {taskCount}</span>
       <div className="todoList">
-        {todoList.map((task: ITask, key: number) => {
-          return <TodoTask key={key} task={task} deleteTask={deleteTask} />;
+        {todoList.map((task: ITask, index) => {
+          return <TodoTask key={index} task={task} deleteTask={deleteTask} />;
         })}
       </div>
     </div>
