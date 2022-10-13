@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   font-weight: 600;
-  color: #28283571;;
+  color: #28283571;
   font-size: 30px;
   margin: 30px 0;
 }
@@ -27,20 +27,20 @@ input {
 
 .input::-webkit-input-placeholder {
   font-size: 14px;
-  font-weight: 500;
-  color: #28283556;
+  font-weight: 600;
+  color: #22222c50;
 }
 
 .input {
-  width: 307.39px;
-  height: 4.5vh;
+  width: 307.66px;
+  height: 5vh;
 }
 
 .btn {
   position: absolute;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  width: 4.5vh;
-  height: 4.5vh;
+  width: 5vh;
+  height: 5vh;
   background-color: #64bdf8;
   font-size: 16px;
   font-weight: 700;
@@ -50,11 +50,37 @@ input {
   cursor: pointer;
 }
 
+footer {
+  text-align: center;
+}
+
+.todo-cont {
+  height: 1px;
+  color: #1f1f29ad;
+}
+
+li {
+  display: inline;
+  color: #777;
+  padding: 10px 15px;
+  height: 20px;
+}
+
+hr {
+  display: block;
+  margin: 25px;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
 .task {
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   align-items: center;
   justify-content: space-between;
+  font-size: 17px;
+  font-weight: 700;
   background-color: #fff;
   height: 5.5vh;
   padding-left: 15px;
