@@ -101,9 +101,7 @@ hr {
   font-weight: 700;
   background-color: #fff;
   height: 5.5vh;
-  padding-left: 15px;
   box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
-  border-left: 11px solid #64bdf8;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -114,10 +112,9 @@ hr {
   width: 1.3em;
   height: 17em;
   margin-right: 10px;
-  background-color: white;
+  background-color: #64bdf8ab;
   border-radius: 50%;
   vertical-align: middle;
-  border: 1px solid #ddd;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
